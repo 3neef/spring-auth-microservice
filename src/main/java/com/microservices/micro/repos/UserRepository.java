@@ -16,5 +16,6 @@ public interface UserRepository extends JpaRepository<User,Long> {
     User findByName(String name);
     Page<User> findByNameLike(String name,Pageable pageable);
     List<User> findByNameAndPassword(String name,String password);
-    List<User> findByNameLike(String name);
+    List<User> findByNameLike(String name); 
+	Boolean existsByName(String name);
 }
